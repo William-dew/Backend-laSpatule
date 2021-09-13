@@ -1,0 +1,13 @@
+{
+    "name": "willi/la-spatule",
+    "authors": [
+        {
+            "name": "William-dew",
+            "email": "william.dewailly@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"laSpatule\\": "."}
+    }
+}

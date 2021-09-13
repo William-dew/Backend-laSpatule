@@ -1,0 +1,27 @@
+{
+    "name": "william/wp-install-composer",
+    "description": "WordPress custom install with composer",
+    "authors": [
+        {
+            "name": "william-dew",
+            "email": "william.dewailly@gmail.com"
+        }
+    ],
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "^5.8",
+        "johnbillion/query-monitor": "^3.7"
+    },
+    "extra": {
+        "wordpress-install-dir": "wp",
+        "installer-paths": {
+            "content/themes/{$name}": ["type:wordpress-theme"],
+            "content/plugins/{$name}": ["type:wordpress-plugin"]
+        }
+    }
+}
