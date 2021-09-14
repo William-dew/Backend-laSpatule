@@ -1,0 +1,1 @@
+C:/wamp64/www/Backend-laSpatule/content/plugins/query-monitor/wp-content/db.php

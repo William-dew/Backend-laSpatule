@@ -15,7 +15,8 @@
     ],
     "require": {
         "johnpbloch/wordpress": "^5.8",
-        "johnbillion/query-monitor": "^3.7"
+        "johnbillion/query-monitor": "^3.7",
+        "wpackagist-plugin/fakerpress": "^0.5.1"
     },
     "extra": {
         "wordpress-install-dir": "wp",

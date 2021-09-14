@@ -1,4 +1,7 @@
 <?php
+
+namespace LaSpatule;
+
 /**
  * Plugin Name: La Spatule
  * Version: 1.0
@@ -6,4 +9,5 @@
  * Description: Plugin pour le projet la Spatule 
  */
 
- require __DIR__ . 'vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
+Plugin::run();
