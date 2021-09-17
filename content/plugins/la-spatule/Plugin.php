@@ -6,7 +6,7 @@ class Plugin
 {
     public static function run()
     {
-        // activation du cpt RecipePostType
+        // activation du cpt RecipePostType et des métadonnées
         add_action('init', ['LaSpatule\PostType\RecipePostType', 'register']);
     }
 }
