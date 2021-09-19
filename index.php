@@ -15,5 +15,8 @@
 // desactivation de la gestion des thèmes 
 define( 'WP_USE_THEMES', false );
 
+
+
 /** Loads the WordPress Environment and Template */
 require __DIR__ . '/wp/wp-blog-header.php';
+

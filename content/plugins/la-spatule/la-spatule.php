@@ -10,4 +10,5 @@ namespace LaSpatule;
  */
 
 require __DIR__ . '/vendor/autoload.php';
+
 Plugin::run();
