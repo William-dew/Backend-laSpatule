@@ -21,6 +21,7 @@ class RestFields
     static public function getFeaturedMediaUrl($post)
     {
         // print_r($post);
+        // $post => objet courant sous la forme d'un array
         return get_the_post_thumbnail_url($post['id']);
     }
 }

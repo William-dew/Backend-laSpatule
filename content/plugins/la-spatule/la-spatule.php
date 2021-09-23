@@ -11,4 +11,6 @@ namespace LaSpatule;
 
 require __DIR__ . '/vendor/autoload.php';
 
+define ( 'LA_SPATULE_PLUGIN_FILE', __FILE__);
+
 Plugin::run();
