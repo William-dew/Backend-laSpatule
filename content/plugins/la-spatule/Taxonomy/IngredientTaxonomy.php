@@ -6,6 +6,9 @@ class IngredientTaxonomy extends Taxonomy
 {
     const TAXONOMY_KEY = 'ingredient';
 
+    const REST_BASE = self::TAXONOMY_KEY;
+
+
     const TAXONOMY_LABELS = [
         'name'          => 'Ingredients',
         'singular_name' => 'Ingredient',

@@ -16,7 +16,8 @@ class Taxonomy
                 'show_in_rest'  => true,
                 'public'        => true,
                 'capabilities'  => static::CAPABILITIES,
-                'hierarchical'   => true
+                'hierarchical'  => true,
+                'rest_base'     => static::REST_BASE,
             ],
         );
     }

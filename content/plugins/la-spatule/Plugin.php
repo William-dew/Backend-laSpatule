@@ -15,5 +15,7 @@ class Plugin
         add_action('init', ['LaSpatule\PostType\RecipePostType', 'register']);
         add_action('rest_api_init', ['LaSpatule\Rest\RestFields', 'RegisterfeaturedmediaField']);
         add_action('init', ['LaSpatule\Taxonomy\IngredientTaxonomy', 'register']);
+        add_action('init', ['LaSpatule\Taxonomy\TypeTaxonomy', 'register']);
+
     }
 }
