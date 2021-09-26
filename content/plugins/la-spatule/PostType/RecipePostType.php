@@ -33,11 +33,14 @@ class RecipePostTYpe
                 'supports' => [
                     'title',
                     'editor',
+                    'author',
                     'thumbnail',
                     'custom-fields',
+                    'trackbacks',
+                    'page-attributes',
                     'comments',
                     'revisions',
-                    'excerpt'
+                    'excerpt',
                 ]
             ]
         );

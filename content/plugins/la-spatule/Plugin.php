@@ -4,8 +4,9 @@ namespace LaSpatule;
 
 use LaSpatule\PostType\RecipePostTYpe;
 use LaSpatule\Role\ChefRole;
-use LaSpatule\Taxonomy\IngredientTaxonomy;
+use LaSpatule\Role\RecipeContributorRole;
 use LaSpatule\Taxonomy\TypeTaxonomy;
+use LaSpatule\Taxonomy\IngredientTaxonomy;
 
 class Plugin
 {
@@ -20,6 +21,13 @@ class Plugin
 
     static public function onPluginActivation()
     {
+        // remove_role('contributor');
+        // remove_role('author');
+        // remove_role('editor');
+        // remove_role('subscriber');
+
+
+
         // activation du cpt RecipePostType et des métadonnées
         RecipePostTYpe::register();
 
@@ -31,14 +39,20 @@ class Plugin
         TypeTaxonomy::register();
         TypeTaxonomy::addAdminCapabilities();
 
-        // Ajout du role chef
+        // Ajout des roles
         ChefRole::add();
+        RecipeContributorRole::add();
+
+        flush_rewrite_rules();
     }
 
     static public function onPluginDeactivation()
     {
         ChefRole::remove();
+        RecipeContributorRole::remove();
         IngredientTaxonomy::removeAdminCapabilities();
         TypeTaxonomy::removeAdminCapabilities();
+
+        flush_rewrite_rules();
     }
 }

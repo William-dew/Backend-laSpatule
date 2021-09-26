@@ -8,6 +8,9 @@ class TypeTaxonomy extends Taxonomy
 
     const REST_BASE = 'recipe_type';
 
+    const HIERARCHICAL = true;
+
+
     const TAXONOMY_LABELS = [
         'name'          => 'types de plat',
         'singular_name' => 'type de plat',

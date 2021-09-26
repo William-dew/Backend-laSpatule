@@ -20,4 +20,3 @@ define( 'WP_USE_THEMES', false );
 /** Loads the WordPress Environment and Template */
 require __DIR__ . '/wp/wp-blog-header.php';
 
-var_dump(get_role('administrator'));
