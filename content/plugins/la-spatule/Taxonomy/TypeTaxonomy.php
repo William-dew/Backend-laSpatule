@@ -19,9 +19,9 @@ class TypeTaxonomy extends Taxonomy
     ];
 
     const CAPABILITIES = [
-        'manage_terms'  => 'manage_ingredients',
-        'edit_terms'    => 'edit_ingredients',
-        'delete_terms'  => 'delete_ingredients',
-        'assign_terms'  => 'assign_ingredients'
+        'manage_terms'  => 'manage_types',
+        'edit_terms'    => 'edit_types',
+        'delete_terms'  => 'delete_types',
+        'assign_terms'  => 'assign_types'
     ];
 }

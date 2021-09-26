@@ -29,5 +29,12 @@ class Taxonomy
             $adminRole->add_cap($capability);
         }
     }
- 
+
+    static public function removeAdminCapabilities()
+    {
+        $adminRole = get_role('administrator');
+        foreach (static::CAPABILITIES as  $key => $capability) {
+            $adminRole->remove_cap($capability);
+        }
+    }
 }
