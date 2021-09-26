@@ -16,7 +16,7 @@ class Taxonomy
                 'show_in_rest'  => true,
                 'public'        => true,
                 'capabilities'  => static::CAPABILITIES,
-                'hierarchical'  => true,
+                'hierarchical'  => static::HIERARCHICAL,
                 'rest_base'     => static::REST_BASE,
             ],
         );
@@ -29,5 +29,12 @@ class Taxonomy
             $adminRole->add_cap($capability);
         }
     }
- 
+
+    static public function removeAdminCapabilities()
+    {
+        $adminRole = get_role('administrator');
+        foreach (static::CAPABILITIES as  $key => $capability) {
+            $adminRole->remove_cap($capability);
+        }
+    }
 }

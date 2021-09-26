@@ -8,6 +8,8 @@ class IngredientTaxonomy extends Taxonomy
 
     const REST_BASE = self::TAXONOMY_KEY;
 
+    const HIERARCHICAL = false;
+
 
     const TAXONOMY_LABELS = [
         'name'          => 'Ingredients',
