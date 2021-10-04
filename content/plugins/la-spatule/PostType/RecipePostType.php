@@ -2,7 +2,7 @@
 
 namespace LaSpatule\PostType;
 
-class RecipePostTYpe
+class RecipePostType
 {
     const LABELS = [
         'name' => 'Recettes',

@@ -2,7 +2,7 @@
 
 namespace LaSpatule;
 
-use LaSpatule\PostType\RecipePostTYpe;
+use LaSpatule\PostType\RecipePostType;
 use LaSpatule\Role\ChefRole;
 use LaSpatule\Role\RecipeContributorRole;
 use LaSpatule\Taxonomy\TypeTaxonomy;
@@ -21,7 +21,7 @@ class Plugin
 
     static public function onPluginActivation()
     {
-        // remove_role('contributor');
+        remove_role('contributor');
         // remove_role('author');
         // remove_role('editor');
         // remove_role('subscriber');
@@ -29,7 +29,7 @@ class Plugin
 
 
         // activation du cpt RecipePostType et des métadonnées
-        RecipePostTYpe::register();
+        RecipePostType::register();
 
         // activation de la taxonomie ingredient et ajout des capacités au role administrateur
         IngredientTaxonomy::register();
