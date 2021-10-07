@@ -16,6 +16,15 @@ class RestFields
                 // 'update_callback' =>
             ]
         );
+        register_rest_field(
+            'recipe',
+            'formatted_date',
+            [
+                'get_callback'=>function(){
+                return get_the_date();
+            }
+            ]
+        );
     }
 
     static public function getFeaturedMediaUrl($post)
