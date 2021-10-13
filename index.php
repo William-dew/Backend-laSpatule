@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Front to the WordPress application. This file doesn't do anything, but loads
  * wp-blog-header.php which does and tells WordPress to load the theme.
@@ -13,10 +14,9 @@
  */
 
 // desactivation de la gestion des thèmes 
-define( 'WP_USE_THEMES', false );
+define('WP_USE_THEMES', true);
 
 
 
 /** Loads the WordPress Environment and Template */
 require __DIR__ . '/wp/wp-blog-header.php';
-

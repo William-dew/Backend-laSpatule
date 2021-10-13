@@ -18,7 +18,8 @@
         "johnbillion/query-monitor": "^3.7",
         "wpackagist-plugin/fakerpress": "^0.5.1",
         "wpackagist-theme/twentytwenty": "^1.6",
-        "wpackagist-plugin/advanced-custom-fields": "^5.10"
+        "wpackagist-plugin/advanced-custom-fields": "^5.10",
+        "wpackagist-plugin/jwt-auth": "^2.0"
     },
     "extra": {
         "wordpress-install-dir": "wp",

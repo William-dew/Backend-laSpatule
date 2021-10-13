@@ -18,6 +18,7 @@ class RecipePostType
         'temps_de_cuisson',
         'nombre_de_personne',
         'cout',
+        'sous_titre'
     ];
 
     static public function register()

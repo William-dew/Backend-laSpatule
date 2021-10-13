@@ -16,7 +16,7 @@ class Plugin
         add_action('init', [self::class, 'onPluginActivation']);
         register_deactivation_hook(LA_SPATULE_PLUGIN_FILE, [self::class, 'onPluginDeactivation']);
 
-        add_action('rest_api_init', ['LaSpatule\Rest\RestFields', 'RegisterfeaturedmediaField']);
+        add_action('rest_api_init', ['LaSpatule\Rest\RestFields', 'Registerfields']);
     }
 
     static public function onPluginActivation()
