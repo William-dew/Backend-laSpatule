@@ -40,5 +40,17 @@ class RestFields
                 }
             ]
         );
+
+        // Récupération du nom du type de plat
+        register_rest_field(
+            'recipe',
+            'type_recipe',
+            [
+                'get_callback' => function ($post) {
+                    $term =  get_term($post['recipe_type'][0]);
+                    return $term->name;
+                }
+            ]
+        );
     }
 }
