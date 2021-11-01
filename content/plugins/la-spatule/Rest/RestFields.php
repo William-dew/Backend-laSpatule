@@ -52,5 +52,26 @@ class RestFields
                 }
             ]
         );
+
+        // creation route pour récupérer données table custom
+        register_rest_route('laspatule/v1', '/note', [
+            'methods' => 'GET',
+            'callback' => function () {
+                global $wpdb;
+                $sql = "SELECT * FROM `sp_note`";
+                return $wpdb->get_results($sql);
+            }
+        ]);
+
+        register_rest_route('laspatule/v1', '/note', [
+            'methods' => 'POST',
+            'callback' => function ($request) {
+                global $wpdb;
+                $name = $request['premier params'];
+                $sql = "INSERT INTO `sp_note` VALUES ('','$name', 'toto','30') ";
+                $wpdb->query($sql);
+                echo ($request['premier params']);
+            }
+        ]);
     }
 }
