@@ -49,7 +49,10 @@ class RecipePostType
             register_post_meta(
                 'recipe',
                 $meta_key,
-                ['show_in_rest' => true]
+                [
+                    'show_in_rest' => true,
+                    'single' => true,
+                ]
             );
         }
     }
