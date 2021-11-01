@@ -2,6 +2,7 @@
 
 namespace LaSpatule;
 
+use LaSpatule\Classes\Database;
 use LaSpatule\PostType\RecipePostType;
 use LaSpatule\Role\ChefRole;
 use LaSpatule\Role\RecipeContributorRole;
@@ -43,6 +44,10 @@ class Plugin
         ChefRole::add();
         RecipeContributorRole::add();
 
+        // Création de la table custom
+        Database::generateNotationRecipeTable();
+
+
         flush_rewrite_rules();
     }
 
@@ -52,6 +57,7 @@ class Plugin
         RecipeContributorRole::remove();
         IngredientTaxonomy::removeAdminCapabilities();
         TypeTaxonomy::removeAdminCapabilities();
+        Database::deleteNotationRecipeTable();
 
         flush_rewrite_rules();
     }
